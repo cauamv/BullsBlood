@@ -40,7 +40,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         register.setLayout(new MigLayout("wrap", "push[center]push", "push[]25[]10[]10[]25[]push"));
         JLabel label = new JLabel("Criar uma conta");
         label.setFont(new Font("sansserif", 1, 30));
-        label.setForeground(new Color(7, 164, 121));
+        label.setForeground(new Color(158, 2, 2));
         register.add(label);
         MyTextField txtUser = new MyTextField();
         txtUser.setPrefixIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/user.png")));
@@ -55,7 +55,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         txtPass.setHint("Senha");
         register.add(txtPass, "w 60%");
         Button cmd = new Button();
-        cmd.setBackground(new Color(7, 164, 121));
+        cmd.setBackground(new Color(158, 2, 2));
         cmd.setForeground(new Color(250, 250, 250));
         cmd.addActionListener(eventRegister);
         cmd.setText("CADASTRAR-SE");
@@ -75,7 +75,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         login.setLayout(new MigLayout("wrap", "push[center]push", "push[]25[]10[]10[]25[]push"));
         JLabel label = new JLabel("ENTRAR");
         label.setFont(new Font("sansserif", 1, 30));
-        label.setForeground(new Color(7, 164, 121));
+        label.setForeground(new Color(158, 2, 2));
         login.add(label);
         MyTextField txtEmail = new MyTextField();
         txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/mail.png")));
@@ -92,7 +92,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         cmdForget.setCursor(new Cursor(Cursor.HAND_CURSOR));
         login.add(cmdForget);
         Button cmd = new Button();
-        cmd.setBackground(new Color(7, 164, 121));
+        cmd.setBackground(new Color(158, 2, 2));
         cmd.setForeground(new Color(250, 250, 250));
         cmd.addActionListener(eventLogin);
         cmd.setText("ENTRAR");
