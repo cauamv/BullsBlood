@@ -38,27 +38,27 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
 
     private void initRegister(ActionListener eventRegister) {
         register.setLayout(new MigLayout("wrap", "push[center]push", "push[]25[]10[]10[]25[]push"));
-        JLabel label = new JLabel("Create Account");
+        JLabel label = new JLabel("Criar uma conta");
         label.setFont(new Font("sansserif", 1, 30));
         label.setForeground(new Color(7, 164, 121));
         register.add(label);
         MyTextField txtUser = new MyTextField();
-        txtUser.setPrefixIcon(new ImageIcon(getClass().getResource("/com/raven/icon/user.png")));
-        txtUser.setHint("Name");
+        txtUser.setPrefixIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icon/user.png")));
+        txtUser.setHint("Nome");
         register.add(txtUser, "w 60%");
         MyTextField txtEmail = new MyTextField();
-        txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/com/raven/icon/mail.png")));
+        txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icon/mail.png")));
         txtEmail.setHint("Email");
         register.add(txtEmail, "w 60%");
         MyPasswordField txtPass = new MyPasswordField();
-        txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/com/raven/icon/pass.png")));
-        txtPass.setHint("Password");
+        txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icon/pass.png")));
+        txtPass.setHint("Senha");
         register.add(txtPass, "w 60%");
         Button cmd = new Button();
         cmd.setBackground(new Color(7, 164, 121));
         cmd.setForeground(new Color(250, 250, 250));
         cmd.addActionListener(eventRegister);
-        cmd.setText("SIGN UP");
+        cmd.setText("CADASTRAR-SE");
         register.add(cmd, "w 40%, h 40");
         cmd.addActionListener(new ActionListener() {
             @Override
@@ -73,19 +73,19 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
 
     private void initLogin(ActionListener eventLogin) {
         login.setLayout(new MigLayout("wrap", "push[center]push", "push[]25[]10[]10[]25[]push"));
-        JLabel label = new JLabel("Sign In");
+        JLabel label = new JLabel("ENTRAR");
         label.setFont(new Font("sansserif", 1, 30));
         label.setForeground(new Color(7, 164, 121));
         login.add(label);
         MyTextField txtEmail = new MyTextField();
-        txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/com/raven/icon/mail.png")));
+        txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icon/mail.png")));
         txtEmail.setHint("Email");
         login.add(txtEmail, "w 60%");
         MyPasswordField txtPass = new MyPasswordField();
-        txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/com/raven/icon/pass.png")));
-        txtPass.setHint("Password");
+        txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icon/pass.png")));
+        txtPass.setHint("Senha");
         login.add(txtPass, "w 60%");
-        JButton cmdForget = new JButton("Forgot your password ?");
+        JButton cmdForget = new JButton("Esqueceu sua senha?");
         cmdForget.setForeground(new Color(100, 100, 100));
         cmdForget.setFont(new Font("sansserif", 1, 12));
         cmdForget.setContentAreaFilled(false);
@@ -95,7 +95,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         cmd.setBackground(new Color(7, 164, 121));
         cmd.setForeground(new Color(250, 250, 250));
         cmd.addActionListener(eventLogin);
-        cmd.setText("SIGN IN");
+        cmd.setText("ENTRAR");
         login.add(cmd, "w 40%, h 40");
         cmd.addActionListener(new ActionListener() {
             @Override

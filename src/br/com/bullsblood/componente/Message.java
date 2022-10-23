@@ -29,9 +29,9 @@ public class Message extends javax.swing.JPanel {
         this.messageType = messageType;
         lbMessage.setText(message);
         if (messageType == MessageType.SUCCESS) {
-            lbMessage.setIcon(new ImageIcon(getClass().getResource("/com/raven/icon/success.png")));
+            lbMessage.setIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icon/success.png")));
         } else {
-            lbMessage.setIcon(new ImageIcon(getClass().getResource("/com/raven/icon/error.png")));
+            lbMessage.setIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icon/error.png")));
         }
     }
 
