@@ -77,7 +77,7 @@ public class PanelCover extends javax.swing.JPanel {
     @Override
     protected void paintComponent(Graphics grphcs) {
         Graphics2D g2 = (Graphics2D) grphcs;
-        GradientPaint gra = new GradientPaint(0, 0, new Color(35, 166, 97), 0, getHeight(), new Color(22, 116, 66));
+        GradientPaint gra = new GradientPaint(0, 0, new Color(255, 0, 0), 0, getHeight(), new Color(204, 2, 2));
         g2.setPaint(gra);
         g2.fillRect(0, 0, getWidth(), getHeight());
         super.paintComponent(grphcs);
@@ -122,15 +122,15 @@ public class PanelCover extends javax.swing.JPanel {
     private void login(boolean login) {
         if (this.isLogin != login) {
             if (login) {
-                title.setText("hello, Friend!");
-                description.setText("Enter your personal details");
-                description1.setText("and start journey with us");
-                button.setText("SIGN UP");
+                title.setText("Olá!");
+                description.setText("Digite seus detalhes pessoais");
+                description1.setText("e comece sua jornada com nós");
+                button.setText("CADASTRAR-SE");
             } else {
-                title.setText("Welcome Back!");
-                description.setText("To keep connected with us please");
-                description1.setText("login with your personal info");
-                button.setText("SIGN IN");
+                title.setText("Bem-vindo de volta!");
+                description.setText("Para se manter conectado conosco, por favor");
+                description1.setText("entre com suas informações pessoais");
+                button.setText("ENTRAR");
             }
             this.isLogin = login;
         }
