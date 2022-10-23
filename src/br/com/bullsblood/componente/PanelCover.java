@@ -35,14 +35,14 @@ public class PanelCover extends javax.swing.JPanel {
     }
 
     private void init() {
-        title = new JLabel("Welcome Back!");
+        title = new JLabel("Bem-vindo de volta!");
         title.setFont(new Font("sansserif", 1, 30));
         title.setForeground(new Color(245, 245, 245));
         add(title);
-        description = new JLabel("To keep connected with us please");
+        description = new JLabel("Para se manter conectado conosco, por favor");
         description.setForeground(new Color(245, 245, 245));
         add(description);
-        description1 = new JLabel("login with your personal info");
+        description1 = new JLabel("entre com suas informações pessoais");
         description1.setForeground(new Color(245, 245, 245));
         add(description1);
         button = new ButtonOutLine();
