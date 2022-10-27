@@ -10,12 +10,12 @@ public class ModelUser {
         this.userID = userID;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getNomeDeUsuario() {
+        return nomeDeUsuario;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setNomeDeUsuario(String nomeDeUsuario) {
+        this.nomeDeUsuario = nomeDeUsuario;
     }
 
     public String getEmail() {
@@ -26,43 +26,43 @@ public class ModelUser {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public String getVerifyCode() {
-        return verifyCode;
+    public String getCodigoDeVerificacao() {
+        return codigoDeVerificacao;
     }
 
-    public void setVerifyCode(String verifyCode) {
-        this.verifyCode = verifyCode;
+    public void setCodigoDeVerificacao(String codigoDeVerificacao) {
+        this.codigoDeVerificacao = codigoDeVerificacao;
     }
 
-    public ModelUser(int userID, String userName, String email, String password, String verifyCode) {
+    public ModelUser(int userID, String nomeDeUsuario, String email, String senha, String codigoDeVerificacao) {
         this.userID = userID;
-        this.userName = userName;
+        this.nomeDeUsuario = nomeDeUsuario;
         this.email = email;
-        this.password = password;
-        this.verifyCode = verifyCode;
+        this.senha = senha;
+        this.codigoDeVerificacao = codigoDeVerificacao;
     }
 
-    public ModelUser(int userID, String userName, String email, String password) {
+    public ModelUser(int userID, String nomeDeUsuario, String email, String senha) {
         this.userID = userID;
-        this.userName = userName;
+        this.nomeDeUsuario = nomeDeUsuario;
         this.email = email;
-        this.password = password;
+        this.senha = senha;
     }
 
     public ModelUser() {
     }
 
     private int userID;
-    private String userName;
+    private String nomeDeUsuario;
     private String email;
-    private String password;
-    private String verifyCode;
+    private String senha;
+    private String codigoDeVerificacao;
 }

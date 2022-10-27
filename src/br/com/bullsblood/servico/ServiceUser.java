@@ -22,7 +22,7 @@ public class ServiceUser {
         ModelUser data = null;
         PreparedStatement p = con.prepareStatement("select UserID, UserName, Email from `user` where BINARY(Email)=? and BINARY(`Password`)=? and `Status`='Verified' limit 1");
         p.setString(1, login.getEmail());
-        p.setString(2, login.getPassword());
+        p.setString(2, login.getSenha());
         ResultSet r = p.executeQuery();
         if (r.first()) {
             int userID = r.getInt(1);
@@ -38,9 +38,9 @@ public class ServiceUser {
     public void insertUser(ModelUser user) throws SQLException {
         PreparedStatement p = con.prepareStatement("insert into `user` (UserName, Email, `Password`, VerifyCode) values (?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
         String code = generateVerifyCode();
-        p.setString(1, user.getUserName());
+        p.setString(1, user.getNomeDeUsuario());
         p.setString(2, user.getEmail());
-        p.setString(3, user.getPassword());
+        p.setString(3, user.getSenha());
         p.setString(4, code);
         p.execute();
         ResultSet r = p.getGeneratedKeys();
@@ -49,7 +49,7 @@ public class ServiceUser {
         r.close();
         p.close();
         user.setUserID(userID);
-        user.setVerifyCode(code);
+        user.setCodigoDeVerificacao(code);
     }
 
     private String generateVerifyCode() throws SQLException {

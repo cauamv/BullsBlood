@@ -22,8 +22,8 @@ public class PanelVerifyCode extends javax.swing.JPanel {
     public void setVisible(boolean bln) {
         super.setVisible(bln);
         if (bln) {
-            txtCode.grabFocus();
-            txtCode.setText("");
+            txtCodigo.grabFocus();
+            txtCodigo.setText("");
         }
     }
 
@@ -32,31 +32,31 @@ public class PanelVerifyCode extends javax.swing.JPanel {
     private void initComponents() {
 
         panelRound1 = new br.com.bullsblood.swing.PanelRound();
-        txtCode = new br.com.bullsblood.swing.MyTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        cmdOK = new br.com.bullsblood.swing.ButtonOutLine();
-        cmdCancel = new br.com.bullsblood.swing.ButtonOutLine();
+        txtCodigo = new br.com.bullsblood.swing.MyTextField();
+        titulo = new javax.swing.JLabel();
+        subTitulo = new javax.swing.JLabel();
+        btOK = new br.com.bullsblood.swing.ButtonOutLine();
+        btCancelar = new br.com.bullsblood.swing.ButtonOutLine();
 
-        txtCode.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtCodigo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(63, 63, 63));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Verify Code");
+        titulo.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        titulo.setForeground(new java.awt.Color(63, 63, 63));
+        titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo.setText("Verificar código");
 
-        jLabel2.setForeground(new java.awt.Color(63, 63, 63));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Check your mail to get verify code");
+        subTitulo.setForeground(new java.awt.Color(63, 63, 63));
+        subTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        subTitulo.setText("Verifique seu e-mail para obter o código de verificação");
 
-        cmdOK.setBackground(new java.awt.Color(18, 138, 62));
-        cmdOK.setText("OK");
+        btOK.setBackground(new java.awt.Color(18, 138, 62));
+        btOK.setText("OK");
 
-        cmdCancel.setBackground(new java.awt.Color(192, 25, 25));
-        cmdCancel.setText("Cancel");
-        cmdCancel.addActionListener(new java.awt.event.ActionListener() {
+        btCancelar.setBackground(new java.awt.Color(192, 25, 25));
+        btCancelar.setText("Cancelar");
+        btCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmdCancelActionPerformed(evt);
+                btCancelarActionPerformed(evt);
             }
         });
 
@@ -68,29 +68,29 @@ public class PanelVerifyCode extends javax.swing.JPanel {
                 .addGap(100, 100, 100)
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtCode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
+                        .addComponent(txtCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(subTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelRound1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btOK, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(100, 100, 100))
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jLabel1)
+                .addComponent(titulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(subTitulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btOK, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20))
         );
 
@@ -99,9 +99,9 @@ public class PanelVerifyCode extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,9 +112,9 @@ public class PanelVerifyCode extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmdCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCancelActionPerformed
+    private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
         setVisible(false);
-    }//GEN-LAST:event_cmdCancelActionPerformed
+    }//GEN-LAST:event_btCancelarActionPerformed
 
     @Override
     protected void paintComponent(Graphics grphcs) {
@@ -127,19 +127,19 @@ public class PanelVerifyCode extends javax.swing.JPanel {
     }
 
     public String getInputCode() {
-        return txtCode.getText().trim();
+        return txtCodigo.getText().trim();
     }
 
     public void addEventButtonOK(ActionListener event) {
-        cmdOK.addActionListener(event);
+        btOK.addActionListener(event);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private br.com.bullsblood.swing.ButtonOutLine cmdCancel;
-    private br.com.bullsblood.swing.ButtonOutLine cmdOK;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private br.com.bullsblood.swing.ButtonOutLine btCancelar;
+    private br.com.bullsblood.swing.ButtonOutLine btOK;
     private br.com.bullsblood.swing.PanelRound panelRound1;
-    private br.com.bullsblood.swing.MyTextField txtCode;
+    private javax.swing.JLabel subTitulo;
+    private javax.swing.JLabel titulo;
+    private br.com.bullsblood.swing.MyTextField txtCodigo;
     // End of variables declaration//GEN-END:variables
 }

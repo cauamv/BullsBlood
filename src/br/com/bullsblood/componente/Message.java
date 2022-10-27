@@ -27,11 +27,11 @@ public class Message extends javax.swing.JPanel {
 
     public void showMessage(MessageType messageType, String message) {
         this.messageType = messageType;
-        lbMessage.setText(message);
+        lbMensagem.setText(message);
         if (messageType == MessageType.SUCCESS) {
-            lbMessage.setIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/success.png")));
+            lbMensagem.setIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/success.png")));
         } else {
-            lbMessage.setIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/error.png")));
+            lbMensagem.setIcon(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/error.png")));
         }
     }
 
@@ -39,12 +39,12 @@ public class Message extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbMessage = new javax.swing.JLabel();
+        lbMensagem = new javax.swing.JLabel();
 
-        lbMessage.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        lbMessage.setForeground(new java.awt.Color(248, 248, 248));
-        lbMessage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbMessage.setText("Message");
+        lbMensagem.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        lbMensagem.setForeground(new java.awt.Color(248, 248, 248));
+        lbMensagem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbMensagem.setText("Mensagem");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -52,12 +52,12 @@ public class Message extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                .addComponent(lbMensagem, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addComponent(lbMensagem, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -82,6 +82,6 @@ public class Message extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lbMessage;
+    private javax.swing.JLabel lbMensagem;
     // End of variables declaration//GEN-END:variables
 }

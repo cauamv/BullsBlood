@@ -17,9 +17,9 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="50" max="32767" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
               <Component id="panelRound1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="50" max="32767" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -43,15 +43,15 @@
                   <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtCode" max="32767" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" pref="250" max="32767" attributes="0"/>
+                          <Component id="txtCodigo" max="32767" attributes="0"/>
+                          <Component id="titulo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="subTitulo" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="cmdOK" min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="btOK" min="-2" pref="94" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="cmdCancel" min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="btCancelar" min="-2" pref="94" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
@@ -62,15 +62,15 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="titulo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="subTitulo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="txtCode" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCodigo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cmdOK" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="cmdCancel" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="btOK" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="btCancelar" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
@@ -78,12 +78,12 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="br.com.bullsblood.swing.MyTextField" name="txtCode">
+        <Component class="br.com.bullsblood.swing.MyTextField" name="txtCodigo">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="titulo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="sansserif" size="24" style="1"/>
@@ -92,19 +92,19 @@
               <Color blue="3f" green="3f" red="3f" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Verify Code"/>
+            <Property name="text" type="java.lang.String" value="Verificar c&#xf3;digo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="subTitulo">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3f" green="3f" red="3f" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Check your mail to get verify code"/>
+            <Property name="text" type="java.lang.String" value="Verifique seu e-mail para obter o c&#xf3;digo de verifica&#xe7;&#xe3;o"/>
           </Properties>
         </Component>
-        <Component class="br.com.bullsblood.swing.ButtonOutLine" name="cmdOK">
+        <Component class="br.com.bullsblood.swing.ButtonOutLine" name="btOK">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3e" green="8a" red="12" type="rgb"/>
@@ -112,15 +112,15 @@
             <Property name="text" type="java.lang.String" value="OK"/>
           </Properties>
         </Component>
-        <Component class="br.com.bullsblood.swing.ButtonOutLine" name="cmdCancel">
+        <Component class="br.com.bullsblood.swing.ButtonOutLine" name="btCancelar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="19" green="19" red="c0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Cancel"/>
+            <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdCancelActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btCancelarActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

@@ -10,22 +10,22 @@ public class ModelLogin {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public ModelLogin(String email, String password) {
+    public ModelLogin(String email, String senha) {
         this.email = email;
-        this.password = password;
+        this.senha = senha;
     }
 
     public ModelLogin() {
     }
 
     private String email;
-    private String password;
+    private String senha;
 }

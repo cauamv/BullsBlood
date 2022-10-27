@@ -11,7 +11,7 @@ public class MainSystem extends javax.swing.JFrame {
         this.user = user;
         initComponents();
         getContentPane().setBackground(new Color(255, 255, 255));
-        lbUser.setText(user.getUserName());
+        lbUser.setText(user.getNomeDeUsuario());
     }
 
     @SuppressWarnings("unchecked")

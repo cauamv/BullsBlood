@@ -145,7 +145,7 @@ public class Main extends javax.swing.JFrame {
     private void register() {
         ModelUser user = loginAndRegister.getUser();
         try {
-            if (service.checkDuplicateUser(user.getUserName())) {
+            if (service.checkDuplicateUser(user.getNomeDeUsuario())) {
                 showMessage(Message.MessageType.ERROR, "Nome de usuário já existe");
             } else if (service.checkDuplicateEmail(user.getEmail())) {
                 showMessage(Message.MessageType.ERROR, "Email já existe");
@@ -179,7 +179,7 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void run() {
                 loading.setVisible(true);
-                ModelMessage ms = new ServiceMail().sendMain(user.getEmail(), user.getVerifyCode());
+                ModelMessage ms = new ServiceMail().sendMain(user.getEmail(), user.getCodigoDeVerificacao());
                 if (ms.isSuccess()) {
                     loading.setVisible(false);
                     verifyCode.setVisible(true);

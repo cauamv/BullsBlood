@@ -18,19 +18,19 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lbMessage" pref="238" max="32767" attributes="0"/>
+              <Component id="lbMensagem" pref="238" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="lbMessage" alignment="0" pref="30" max="32767" attributes="0"/>
+          <Component id="lbMensagem" alignment="0" pref="30" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbMessage">
+    <Component class="javax.swing.JLabel" name="lbMensagem">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="sansserif" size="14" style="0"/>
@@ -39,7 +39,7 @@
           <Color blue="f8" green="f8" red="f8" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Message"/>
+        <Property name="text" type="java.lang.String" value="Mensagem"/>
       </Properties>
     </Component>
   </SubComponents>
