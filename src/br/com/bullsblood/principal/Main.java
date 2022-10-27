@@ -130,13 +130,13 @@ public class Main extends javax.swing.JFrame {
                     ModelUser user = loginAndRegister.getUser();
                     if (service.verifyCodeWithUser(user.getUserID(), verifyCode.getInputCode())) {
                         service.doneVerify(user.getUserID());
-                        showMessage(Message.MessageType.SUCCESS, "Register sucess");
+                        showMessage(Message.MessageType.SUCCESS, "Cadastrado com sucesso");
                         verifyCode.setVisible(false);
                     } else {
-                        showMessage(Message.MessageType.ERROR, "Verify code incorrect");
+                        showMessage(Message.MessageType.ERROR, "Verifique, código incorreto");
                     }
                 } catch (SQLException e) {
-                    showMessage(Message.MessageType.ERROR, "Error");
+                    showMessage(Message.MessageType.ERROR, "Erro");
                 }
             }
         });
@@ -146,15 +146,15 @@ public class Main extends javax.swing.JFrame {
         ModelUser user = loginAndRegister.getUser();
         try {
             if (service.checkDuplicateUser(user.getUserName())) {
-                showMessage(Message.MessageType.ERROR, "User name already exit");
+                showMessage(Message.MessageType.ERROR, "Nome de usuário já existe");
             } else if (service.checkDuplicateEmail(user.getEmail())) {
-                showMessage(Message.MessageType.ERROR, "Email already exit");
+                showMessage(Message.MessageType.ERROR, "Email já existe");
             } else {
                 service.insertUser(user);
                 sendMain(user);
             }
         } catch (SQLException e) {
-            showMessage(Message.MessageType.ERROR, "Error Register");
+            showMessage(Message.MessageType.ERROR, "Erro no cadastro");
         }
     }
 
@@ -166,11 +166,11 @@ public class Main extends javax.swing.JFrame {
                 this.dispose();
                 MainSystem.main(user);
             } else {
-                showMessage(Message.MessageType.ERROR, "Email and Password incorrect");
+                showMessage(Message.MessageType.ERROR, "Email e senha incorretos");
             }
 
         } catch (SQLException e) {
-            showMessage(Message.MessageType.ERROR, "Error Login");
+            showMessage(Message.MessageType.ERROR, "Erro no Login");
         }
     }
 
