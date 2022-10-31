@@ -66,7 +66,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
                 String userName = txtUser.getText().trim();
                 String email = txtEmail.getText().trim();
                 String password = String.valueOf(txtPass.getPassword());
-                user = new ModelUser(0, userName, email, password);
+                user = new ModelUser(userName, email, password);
             }
         });
     }

@@ -56,6 +56,12 @@ public class ModelUser {
         this.email = email;
         this.senha = senha;
     }
+    
+     public ModelUser(String nomeDeUsuario, String email, String senha) {
+        this.nomeDeUsuario = nomeDeUsuario;
+        this.email = email;
+        this.senha = senha;
+    }
 
     public ModelUser() {
     }

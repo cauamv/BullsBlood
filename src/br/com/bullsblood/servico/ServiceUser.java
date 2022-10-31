@@ -20,7 +20,7 @@ public class ServiceUser {
 
     public ModelUser login(ModelLogin login) throws SQLException {
         ModelUser data = null;
-        PreparedStatement p = con.prepareStatement("select UserID, UserName, Email from `user` where BINARY(Email)=? and BINARY(`Password`)=? and `Status`='Verified' limit 1");
+        PreparedStatement p = con.prepareStatement("select UserID, UserName, Email from user where BINARY(Email)=? and BINARY(Password)=? and Status='Verified' limit 1");
         p.setString(1, login.getEmail());
         p.setString(2, login.getSenha());
         ResultSet r = p.executeQuery();
@@ -36,7 +36,7 @@ public class ServiceUser {
     }
 
     public void insertUser(ModelUser user) throws SQLException {
-        PreparedStatement p = con.prepareStatement("insert into `user` (UserName, Email, `Password`, VerifyCode) values (?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
+        PreparedStatement p = con.prepareStatement("insert into user (UserName, Email, `Password`, VerifyCode) values (?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
         String code = generateVerifyCode();
         p.setString(1, user.getNomeDeUsuario());
         p.setString(2, user.getEmail());
@@ -64,10 +64,10 @@ public class ServiceUser {
 
     private boolean checkDuplicateCode(String code) throws SQLException {
         boolean duplicate = false;
-        PreparedStatement p = con.prepareStatement("select UserID from `user` where VerifyCode=? limit 1");
+        PreparedStatement p = con.prepareStatement("select UserID from user where VerifyCode=? limit 1");
         p.setString(1, code);
         ResultSet r = p.executeQuery();
-        if (r.first()) {
+        if (r.next()) {
             duplicate = true;
         }
         r.close();
@@ -77,10 +77,10 @@ public class ServiceUser {
 
     public boolean checkDuplicateUser(String user) throws SQLException {
         boolean duplicate = false;
-        PreparedStatement p = con.prepareStatement("select UserID from `user` where UserName=? and `Status`='Verified' limit 1");
+        PreparedStatement p = con.prepareStatement("select UserID from user where UserName=? and Status='Verified' limit 1");
         p.setString(1, user);
         ResultSet r = p.executeQuery();
-        if (r.first()) {
+        if (r.next()) {
             duplicate = true;
         }
         r.close();
@@ -90,10 +90,10 @@ public class ServiceUser {
 
     public boolean checkDuplicateEmail(String user) throws SQLException {
         boolean duplicate = false;
-        PreparedStatement p = con.prepareStatement("select UserID from `user` where Email=? and `Status`='Verified' limit 1");
+        PreparedStatement p = con.prepareStatement("select UserID from user where Email=? and Status='Verified' limit 1");
         p.setString(1, user);
         ResultSet r = p.executeQuery();
-        if (r.first()) {
+        if (r.next()) {
             duplicate = true;
         }
         r.close();
@@ -102,7 +102,7 @@ public class ServiceUser {
     }
 
     public void doneVerify(int userID) throws SQLException {
-        PreparedStatement p = con.prepareStatement("update `user` set VerifyCode='', `Status`='Verified' where UserID=? limit 1");
+        PreparedStatement p = con.prepareStatement("update user set VerifyCode='', Status='Verified' where UserID=? limit 1");
         p.setInt(1, userID);
         p.execute();
         p.close();
@@ -110,11 +110,11 @@ public class ServiceUser {
 
     public boolean verifyCodeWithUser(int userID, String code) throws SQLException {
         boolean verify = false;
-        PreparedStatement p = con.prepareStatement("select UserID from `user` where UserID=? and VerifyCode=? limit 1");
+        PreparedStatement p = con.prepareStatement("select UserID from user where UserID=? and VerifyCode=? limit 1");
         p.setInt(1, userID);
         p.setString(2, code);
         ResultSet r = p.executeQuery();
-        if (r.first()) {
+        if (r.next()) {
             verify = true;
         }
         r.close();

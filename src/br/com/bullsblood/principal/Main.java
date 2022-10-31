@@ -155,6 +155,8 @@ public class Main extends javax.swing.JFrame {
             }
         } catch (SQLException e) {
             showMessage(Message.MessageType.ERROR, "Erro no cadastro");
+        } catch (Exception e){
+            e.printStackTrace();
         }
     }
 
@@ -171,6 +173,8 @@ public class Main extends javax.swing.JFrame {
 
         } catch (SQLException e) {
             showMessage(Message.MessageType.ERROR, "Erro no Login");
+        } catch (Exception e){
+            e.printStackTrace();
         }
     }
 

@@ -51,6 +51,11 @@ public class PanelVerifyCode extends javax.swing.JPanel {
 
         btOK.setBackground(new java.awt.Color(18, 138, 62));
         btOK.setText("OK");
+        btOK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btOKActionPerformed(evt);
+            }
+        });
 
         btCancelar.setBackground(new java.awt.Color(192, 25, 25));
         btCancelar.setText("Cancelar");
@@ -115,6 +120,10 @@ public class PanelVerifyCode extends javax.swing.JPanel {
     private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
         setVisible(false);
     }//GEN-LAST:event_btCancelarActionPerformed
+
+    private void btOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOKActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btOKActionPerformed
 
     @Override
     protected void paintComponent(Graphics grphcs) {
