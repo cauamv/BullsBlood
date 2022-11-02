@@ -24,7 +24,7 @@ public class ServiceUser {
         p.setString(1, login.getEmail());
         p.setString(2, login.getSenha());
         ResultSet r = p.executeQuery();
-        if (r.first()) {
+        if (r.next()) {
             int userID = r.getInt(1);
             String userName = r.getString(2);
             String email = r.getString(3);
@@ -44,7 +44,7 @@ public class ServiceUser {
         p.setString(4, code);
         p.execute();
         ResultSet r = p.getGeneratedKeys();
-        r.first();
+        r.next();
         int userID = r.getInt(1);
         r.close();
         p.close();
