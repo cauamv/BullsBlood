@@ -58,12 +58,6 @@ public class MainSystem extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/bullsblood/icone/1.png"))); // NOI18N
 
-        list2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                list2MousePressed(evt);
-            }
-        });
-
         list1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 list1MousePressed(evt);
@@ -139,10 +133,6 @@ public class MainSystem extends javax.swing.JFrame {
     private void list1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_list1MousePressed
         list2.clearSelection();
     }//GEN-LAST:event_list1MousePressed
-
-    private void list2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_list2MousePressed
-        list1.clearSelection();
-    }//GEN-LAST:event_list2MousePressed
 
     public static void main(ModelUser user) {
         java.awt.EventQueue.invokeLater(new Runnable() {
