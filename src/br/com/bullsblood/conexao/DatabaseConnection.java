@@ -23,8 +23,8 @@ public class DatabaseConnection {
         String server = "189.113.249.28"; //localhost:3306/bulls_blood
         String port = "3306";
         String database = "bulls_blood";
-        String userName = "root";
-        String password = "root";
+        String userName = "bulls";
+        String password = "blood";
         connection = java.sql.DriverManager.getConnection("jdbc:mysql://" + server + ":" + port + "/" + database, userName, password);
     }
 
