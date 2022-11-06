@@ -27,7 +27,7 @@ public class ListMenu<E extends Object> extends JList<E> {
                     data = (ModelMenu) o;
                 } else {
                     data = new ModelMenu("No Data", "perfil");
-                }
+                } 
                 ItemMenu item = new ItemMenu(data);
                 item.setSelected(selected);
                 return item;
