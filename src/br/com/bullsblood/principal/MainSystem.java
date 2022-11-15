@@ -3,10 +3,13 @@ package br.com.bullsblood.principal;
 import br.com.bullsblood.modelo.ModelMenu;
 import br.com.bullsblood.modelo.ModelUser;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 public class MainSystem extends javax.swing.JFrame {
 
     private final ModelUser user;
+    
+    private MainViewParty viewParty;
 
     public MainSystem(ModelUser user) {
         this.user = user;
@@ -14,6 +17,7 @@ public class MainSystem extends javax.swing.JFrame {
         init();
         getContentPane().setBackground(new Color(255, 255, 255));
         lbUser.setText("Olá, " + user.getNomeDeUsuario());
+        this.viewParty = new MainViewParty();
         
     }
     
@@ -166,9 +170,7 @@ public class MainSystem extends javax.swing.JFrame {
     }//GEN-LAST:event_list2MousePressed
 
     private void list3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_list3MousePressed
-        this.dispose();
-        MainCameras mc = new MainCameras();
-        mc.setVisible(true);
+        viewParty.setVisible(true);
         list1.clearSelection();
         list2.clearSelection();
     }//GEN-LAST:event_list3MousePressed

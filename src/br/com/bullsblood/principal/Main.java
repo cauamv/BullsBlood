@@ -9,15 +9,21 @@ import br.com.bullsblood.conexao.DatabaseConnection;
 import br.com.bullsblood.modelo.ModelLogin;
 import br.com.bullsblood.modelo.ModelMessage;
 import br.com.bullsblood.modelo.ModelUser;
+import static br.com.bullsblood.principal.InitApp.getBrowserPanel;
 import br.com.bullsblood.servico.ServiceMail;
 import br.com.bullsblood.servico.ServiceUser;
+import chrriis.dj.nativeswing.swtimpl.NativeInterface;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
+import javax.swing.JFrame;
 import javax.swing.JLayeredPane;
+import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
@@ -317,11 +323,29 @@ public class Main extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Main().setVisible(true);
+            }
+        });*/
+        
+        NativeInterface.open();
+        SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 new Main().setVisible(true);
             }
         });
+        NativeInterface.runEventPump();
+        // don't forget to properly close native components
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                NativeInterface.close();
+            }
+        }));
+        
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

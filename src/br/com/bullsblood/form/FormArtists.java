@@ -16,7 +16,7 @@ public class FormArtists extends javax.swing.JPanel {
     private void init() {
         mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/FESTA_DO_ENZO.png")), "", ""));
         mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/festinha.png")), "", ""));
-        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/dicas_de_corrida_1.png")), "", ""));
+        mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/clavison.png")), "", ""));
         mostPopular.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/bora_codar.png")), "", ""));
         mostPopular1.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/indiano.png")), "", ""));
         mostPopular1.addImage(new ModelPopular(new ImageIcon(getClass().getResource("/br/com/bullsblood/icone/ROBERTO.png")), "", ""));
